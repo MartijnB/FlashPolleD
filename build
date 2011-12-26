@@ -1,0 +1,9 @@
+rm -rf obj/*.o
+rm server
+
+gdc -g -c -o obj/main.o main.d
+gdc -g -c -o obj/ev.o deimos/ev.d
+
+gdc -o server -lev obj/main.o obj/ev.o
+
+chmod +x server
