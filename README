@@ -14,10 +14,11 @@ It's tested with IPv4 & IPv6.
 
 == Installation ==
 
-This is a source only distribution. Buildscripts for gdc are included but every 
-D2 compiler with the Phobos runtine should work. The Phobos runtime is staticly 
-linked so it isn't a runtime dependency. (But the resulting executable is a bit
-bigger.) A default policy file that opens all ports is included.
+This is a source only distribution. Build scripts for GDC are included but every 
+D2 compiler with the Phobos runtine should work. A default policy file that opens 
+all ports is included.
+
+Note: If you use GDC as D compiler, you need at least version 4.6.2
 
 == Usage ==
 
@@ -32,3 +33,8 @@ Usage: ./server [-46bdfhpv]
   -p, --port=PORT               Listen on PORT
   -s, --stats                   Show stats
   -v, --verbose                 Show more debuginformation
+
+== Notes ==
+
+- In IPv6 mode, IPv4 requests are also handled.
+- The server requires root privileges to bind to (the default) port 843
